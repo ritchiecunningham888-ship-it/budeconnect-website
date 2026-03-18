@@ -1,233 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>BudeConnect | Private Hire & Airport Transfers</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="BudeConnect provides reliable, pre-booked private hire and airport transfers from Bude and North Cornwall.">
-  <link rel="stylesheet" href="assets/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BudeConnect | Private Hire & Airport Transfers in Bude</title>
+  <meta name="description" content="BudeConnect provides reliable private hire, airport transfers and long-distance journeys from Bude and North Cornwall. Pre-booked travel with professional service." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
   <header class="site-header">
-    <div class="container header-inner">
-      <div class="logo">
-        <span class="logo-mark">B</span>
-        <span class="logo-text">BudeConnect</span>
-      </div>
-      <nav class="nav">
-        <a href="#booking">Book</a>
-        <a href="pricing.html">Pricing</a>
+    <div class="container nav">
+      <a href="index.html" class="logo">BudeConnect</a>
+      <nav>
         <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="#why-us">Why us</a>
+        <a href="#journeys">Popular journeys</a>
+        <a href="#booking">Book now</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Hero -->
     <section class="hero">
-      <div class="container hero-inner">
+      <div class="container hero-grid">
         <div class="hero-copy">
-          <h1>Reliable Private Hire in and around Bude</h1>
-          <p>
-            Pre-booked journeys, airport transfers and long-distance private hire from Bude and North Cornwall – on time, every time.
+          <p class="eyebrow">Reliable private hire in Bude and North Cornwall</p>
+          <h1>Private hire and airport transfers you can rely on</h1>
+          <p class="hero-text">
+            Pre-booked journeys, airport transfers and long-distance travel from Bude and the surrounding area.
+            Professional, punctual service with straightforward booking and clear communication from start to finish.
           </p>
+          <p class="hero-note">Licensed private hire operator • Advanced bookings only</p>
+
           <div class="hero-actions">
-            <a class="btn primary" href="#booking">Book your journey</a>
-            <a class="btn secondary" href="tel:07 39941 8064">Call now</a>
+            <a class="btn btn-primary" href="#booking">Book a journey</a>
+            <a class="btn btn-secondary" href="pricing.html">View pricing</a>
+            <a class="btn btn-secondary" href="tel:07399418064">Call now</a>
+            <a class="btn btn-secondary" href="https://wa.me/447399418064">WhatsApp</a>
           </div>
-          <p class="hero-meta">
-            Licensed private hire operator • Advanced bookings only
-          </p>
         </div>
-        <div class="hero-panel">
-          <h2>Quick booking request</h2>
-          <form class="booking-form" id="booking" action="https://formspree.io/f/xaqpllnl" method="POST">
+
+        <div class="booking-card" id="booking">
+          <h2>Get a quick quote</h2>
+          <p>Send your journey details and we’ll confirm availability and fare as soon as possible.</p>
+
+          <form action="https://formspree.io/f/xaqpllnl" method="POST" class="booking-form">
             <label>
-              Name
+              Full name
               <input type="text" name="name" required>
             </label>
+
             <label>
-              Mobile number
+              Phone number
               <input type="tel" name="phone" required>
             </label>
+
             <label>
-              Email
-              <input type="email" name="email" required>
+              Email address
+              <input type="email" name="email">
             </label>
+
             <label>
               Pickup location
               <input type="text" name="pickup" required>
             </label>
+
             <label>
-              Drop-off location
-              <input type="text" name="dropoff" required>
+              Destination
+              <input type="text" name="destination" required>
             </label>
+
             <div class="form-row">
               <label>
                 Date
                 <input type="date" name="date" required>
               </label>
+
               <label>
                 Time
                 <input type="time" name="time" required>
               </label>
             </div>
+
             <div class="form-row">
               <label>
                 Passengers
-                <input type="number" name="passengers" min="1" max="8" value="1" required>
+                <input type="number" name="passengers" min="1" max="8" required>
               </label>
+
               <label>
                 Luggage
-                <select name="luggage">
-                  <option value="light">Light</option>
-                  <option value="standard" selected>Standard</option>
-                  <option value="heavy">Heavy</option>
-                </select>
+                <input type="text" name="luggage" placeholder="e.g. 2 cases, 2 hand luggage">
               </label>
             </div>
+
             <label>
-              Notes (flight number, child seats, accessibility, etc.)
-              <textarea name="notes" rows="3"></textarea>
+              Extra details
+              <textarea name="message" rows="4" placeholder="Flight number, child seat request, return trip, accessibility needs, or anything else helpful"></textarea>
             </label>
-            <button type="submit" class="btn primary full-width">Send booking request</button>
-            <p class="form-help">
-              This sends a booking request, not an instant confirmation. We’ll reply to confirm your fare and pick‑up time.
-            </p>
+
+            <button type="submit" class="btn btn-primary btn-full">Request quote</button>
           </form>
         </div>
       </div>
-    </section>
-
-    <!-- Services -->
-    <section class="section" id="services">
-      <div class="container">
-        <h2>Services</h2>
-        <div class="grid three">
-          <div class="card">
-            <h3>Local private hire</h3>
-            <p>
-              Pre-booked journeys in and around Bude, including school runs, medical appointments, shopping trips and evenings out.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Airport & station transfers</h3>
-            <p>
-              Reliable transfers to and from Newquay, Exeter, Bristol and major rail stations. Meet-and-greet and flight tracking available.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Long-distance journeys</h3>
-            <p>
-              Comfortable, door-to-door travel for business or leisure across the UK, starting or ending in North Cornwall.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why BudeConnect -->
-    <section class="section alt">
-      <div class="container">
-        <h2>Why travel with BudeConnect?</h2>
-        <div class="grid three">
-          <div class="card">
-            <h3>Licensed & insured</h3>
-            <p>
-              Fully licensed private hire operator with local authority approval and appropriate hire-and-reward insurance.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Punctual & reliable</h3>
-            <p>
-              Advance bookings, clear communication and realistic timings so you arrive when you need to.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Comfortable vehicles</h3>
-            <p>
-              Clean, modern vehicles with space for passengers and luggage. Child seats and accessibility options available on request.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Reviews -->
-    <section class="section">
-      <div class="container">
-        <h2>What our passengers say</h2>
-        <div class="grid three">
-          <div class="card quote">
-            <p>“On time, friendly and helpful – we’ll definitely use BudeConnect again for our airport runs.”</p>
-            <span class="quote-name">– A local family</span>
-          </div>
-          <div class="card quote">
-            <p>“Clear communication from booking to drop-off. Made our trip much less stressful.”</p>
-            <span class="quote-name">– Visitor to Bude</span>
-          </div>
-          <div class="card quote">
-            <p>“Professional service and fair pricing. Exactly what we needed for business travel.”</p>
-            <span class="quote-name">– Business traveller</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Call to action -->
-    <section class="section cta">
-      <div class="container cta-inner">
-        <div>
-          <h2>Ready to book your journey?</h2>
-          <p>
-            Send a quick booking request and we’ll confirm your fare and pick-up time as soon as possible.
-          </p>
-        </div>
-        <div class="cta-actions">
-          <a class="btn primary" href="#booking">Request a booking</a>
-          <a class="btn secondary" href="pricing.html">View pricing guide</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer" id="contact">
-    <div class="container footer-inner">
-      <div>
-        <h3>Contact</h3>
-        <p>
-          Phone: <a href="tel:07 39941 8064">07399418064</a><br>
-          Email: <a href="mailto:RitchieCunningham888@gmail.com">RitchieCunningham888@gmail.com</a><br>
-          WhatsApp: <a href="https://wa.me/07399418064">Chat on WhatsApp</a>
-        </p>
-        <p>
-          Operating area: Bude and North Cornwall<br>
-          Operating hours: By advance booking (24/7 by agreement)
-        </p>
-      </div>
-      <div>
-        <h3>Licensing</h3>
-        <p>
-          Licensed private hire operator<br>
-          Licensing authority: Cornwall Council<br>
-          Operator licence number: LI25_006970
-        </p>
-      </div>
-      <div>
-        <h3>Links</h3>
-        <p>
-          <a href="pricing.html">Pricing</a><br>
-          <a href="#booking">Book a journey</a>
-        </p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; <span id="year"></span> BudeConnect. All rights reserved.</p>
-    </div>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-  </footer>
-</body>
-</html>
+    </sect
